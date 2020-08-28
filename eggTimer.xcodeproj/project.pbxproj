@@ -13,6 +13,7 @@
 		698A40FA24F920E000D2C22A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698A40F824F920E000D2C22A /* Main.storyboard */; };
 		698A40FC24F920E200D2C22A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698A40FB24F920E200D2C22A /* Assets.xcassets */; };
 		698A40FF24F920E200D2C22A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698A40FD24F920E200D2C22A /* LaunchScreen.storyboard */; };
+		698A410724F9570700D2C22A /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 698A410624F9570700D2C22A /* alarm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		698A40FB24F920E200D2C22A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		698A40FE24F920E200D2C22A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		698A410024F920E200D2C22A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		698A410624F9570700D2C22A /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				698A40FB24F920E200D2C22A /* Assets.xcassets */,
 				698A40FD24F920E200D2C22A /* LaunchScreen.storyboard */,
 				698A410024F920E200D2C22A /* Info.plist */,
+				698A410624F9570700D2C22A /* alarm.mp3 */,
 			);
 			path = eggTimer;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				698A410724F9570700D2C22A /* alarm.mp3 in Resources */,
 				698A40FF24F920E200D2C22A /* LaunchScreen.storyboard in Resources */,
 				698A40FC24F920E200D2C22A /* Assets.xcassets in Resources */,
 				698A40FA24F920E000D2C22A /* Main.storyboard in Resources */,

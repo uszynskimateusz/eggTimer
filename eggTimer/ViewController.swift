@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -14,9 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     let eggTime = ["soft": 3, "medim": 5, "hard": 7]
+    
     var timer = Timer()
+    
     var totalTime = 0
     var secondsPassed = 0
+    
+    var player: AVAudioPlayer?
     
     
     override func viewDidLoad() {
@@ -30,6 +35,7 @@ class ViewController: UIViewController {
         titleLabel.text = "Egg Cooking Calculator"
         secondsPassed = 0
         
+        timer.invalidate()
         let hardness = sender.currentTitle! //eggTime
         
         totalTime = eggTime[hardness]!
@@ -48,7 +54,14 @@ class ViewController: UIViewController {
             timer.invalidate()
             titleLabel.text = "Done!"
             timeProgress.progress = 1
+            playSound()
         }
+    }
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "alarm", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player!.play()
     }
 }
 
