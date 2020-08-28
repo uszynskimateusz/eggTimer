@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let eggTime = ["soft": 3, "medim": 5, "hard": 7]
-    
-    var timeRemaining = 10
-    var timer = Timer()
-    
+    @IBOutlet weak var timeProgress: UIProgressView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    let eggTime = ["soft": 3, "medim": 5, "hard": 7]
+    var timer = Timer()
+    var totalTime = 0
+    var secondsPassed = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +26,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func hardnessPressed(_ sender: UIButton) {
-        
+        timeProgress.progress = 0
         titleLabel.text = "Egg Cooking Calculator"
+        secondsPassed = 0
         
         let hardness = sender.currentTitle! //eggTime
         
-        timeRemaining = eggTime[hardness]!
+        totalTime = eggTime[hardness]!
+        
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     
     @objc func updateCounter() {
         //example functionality
-        if timeRemaining > 0 {
-            print(timeRemaining)
-            timeRemaining -= 1
+        if secondsPassed < totalTime {
+            let precentageProgress = Float(secondsPassed)/Float(totalTime)
+            timeProgress.progress = precentageProgress
+            secondsPassed += 1
         } else {
             timer.invalidate()
             titleLabel.text = "Done!"
+            timeProgress.progress = 1
         }
     }
 }

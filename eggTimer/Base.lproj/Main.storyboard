@@ -75,13 +75,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvL-Kj-p8i" userLabel="bottomView">
                                         <rect key="frame" x="0.0" y="604" width="414" height="214"/>
                                         <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-e3-LLk">
-                                                <rect key="frame" x="0.0" y="106" width="414" height="2"/>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HsO-e3-LLk">
+                                                <rect key="frame" x="20" y="106" width="374" height="2"/>
                                             </progressView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="HsO-e3-LLk" firstAttribute="centerX" secondItem="SvL-Kj-p8i" secondAttribute="centerX" id="TI3-5D-v44"/>
-                                            <constraint firstItem="HsO-e3-LLk" firstAttribute="centerY" secondItem="SvL-Kj-p8i" secondAttribute="centerY" id="rbs-8U-IeM"/>
+                                            <constraint firstAttribute="trailing" secondItem="HsO-e3-LLk" secondAttribute="trailing" constant="20" id="69N-8I-CnK"/>
+                                            <constraint firstItem="HsO-e3-LLk" firstAttribute="leading" secondItem="SvL-Kj-p8i" secondAttribute="leading" constant="20" id="g2e-P9-fEI"/>
+                                            <constraint firstItem="HsO-e3-LLk" firstAttribute="centerY" secondItem="SvL-Kj-p8i" secondAttribute="centerY" id="sRp-yE-Meh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -99,6 +100,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="timeProgress" destination="HsO-e3-LLk" id="UeG-Lz-he9"/>
                         <outlet property="titleLabel" destination="fgJ-e4-JT9" id="bB2-yu-N2e"/>
                     </connections>
                 </viewController>
